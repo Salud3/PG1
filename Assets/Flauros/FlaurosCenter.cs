@@ -22,13 +22,13 @@ public class FlaurosCenter : MonoBehaviour
     };
 
     int[] triangles = {0,1,2,//check //0
-                       3,4,5,
-                       0,4,1,
-                       2,5,0,
-                       1,4,3,
-                       1,3,2,
-                       2,3,5,
-                       0,5,4
+                       3,4,5,//check
+                       0,4,1,//check
+                       2,5,0,//check
+                       1,4,3,//check
+                       1,3,2,//check
+                       2,3,5,//check
+                       0,5,4//check
     };
     void FlauroCenter()
     {
