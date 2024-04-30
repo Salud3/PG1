@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,22 +10,39 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 public class MakeCube : MonoBehaviour
 {
     public Material material;
-    Vector3[] vertices = { 
+    public MatrixMult matrixMult;
+
+    public enum Rotation { X, Y, Z };
+    public Rotation rotation;
+
+    public Vector3[] vertices = { 
         
-        //Cara 1
-        new Vector3(0,0,0), //0
-        new Vector3(0,1,0), //1
-        new Vector3(1,1,0), //2
-        new Vector3(1,0,0), //3
-        //Cara 2
+        /* VERSION 1
+        //C1
+        new Vector3 (0,0,0), //0
+        new Vector3 (0,1,0), //1
+        new Vector3 (1,1,0), //2
+        new Vector3 (1,0,0), //3
+        //C2
         new Vector3 (1,1,1),//4
         new Vector3 (1,0,1),//5
-        //Cara3
+        //C3
         new Vector3 (0,1,1),//6
-        new Vector3 (0,0,1),//7
-        //Cara4
-//        new Vector3 (0,1,0),//8
-//        new Vector3(0,0,0)//9
+        new Vector3 (0,0,1),//7123
+        */
+
+        //C1
+        new Vector3 (-.5f,-.5f,-0.5f), //0
+        new Vector3 (-.5f,.5f,-0.5f), //1
+        new Vector3 (.5f,.5f,-.5f), //2
+        new Vector3 (.5f,-.5f,-.5f), //3
+        //C2
+        new Vector3 (.5f,.5f,.5f),//4
+        new Vector3 (.5f,-0.5f,.5f),//5
+        //C3
+        new Vector3 (-0.5f,.5f,.5f),//6
+        new Vector3 (-.5f,-.5f,.5f),//7
+
         
     };
 
@@ -62,5 +80,39 @@ public class MakeCube : MonoBehaviour
     private void Start()
     {
         Cube();
+
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+            switch(rotation)
+            {
+                case Rotation.X:
+                        for (int i = 0; i < vertices.Length; i++)
+                        {
+                            vertices[i] = matrixMult.RotX(vertices[i], 30);
+                        }
+                    break;
+                case Rotation.Y:
+                        for (int i = 0; i < vertices.Length; i++)
+                        {
+                            vertices[i] = matrixMult.RotY(vertices[i], 30);
+                        }
+                        break;
+                case Rotation.Z:
+                        for (int i = 0; i < vertices.Length; i++)
+                        {
+                            vertices[i] = matrixMult.RotZ(vertices[i], 30);
+                        }
+                        break;
+            }
+            Cube();
+
+        }
+
+
     }
 }
