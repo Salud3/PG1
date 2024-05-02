@@ -19,7 +19,7 @@ public class MatrixMult : MonoBehaviour
 
     }
 
-    public Vector3 Mult(Vector4 position, Vector4 delta)
+    public Vector3 Move(Vector4 position, Vector4 delta)
     {
         float[,] identity= new float[,] { {1,0,0,delta.x },
                                           {0,1,0,delta.y},
