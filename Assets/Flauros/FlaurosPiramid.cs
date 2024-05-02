@@ -52,13 +52,13 @@ public class FlaurosPiramid : MonoBehaviour
     };
 
     Vector2[] uvs = {
-            new Vector2(0, 0.75f),
-            new Vector2(0.25f, 0.66f),
-            new Vector2(0, 0.33f),
-            new Vector2(0.25f, 0.33f),
-            new Vector2(0.25f, 0.66f),
-            new Vector2(0, 0.33f),
-            new Vector2(0.25f, 0.33f),
+            new Vector2(0, 0.35f),      //0
+            new Vector2(0.25f, 0.66f),  //1
+            new Vector2(0, 0.33f),      //2
+            new Vector2(0.25f, 0.33f),  //3
+            new Vector2(0.25f, 0.66f),  //4
+            new Vector2(0, 0.33f),      //5
+            new Vector2(0.25f, 0.33f),  //6
         };
     void Piramide()
     {
