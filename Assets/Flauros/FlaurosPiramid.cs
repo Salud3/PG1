@@ -28,6 +28,24 @@ public class FlaurosPiramid : MonoBehaviour
 
 
     };
+    Vector3[] vertices2 =
+    {
+        //V2
+        new Vector3(0,      -(Mathf.Sqrt(6)/3)/2,       -.5773502691896f),//0
+        new Vector3(0.5f,   -(Mathf.Sqrt(6)/3)/2,       Mathf.Sqrt(3)/6),//1
+        new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2,        Mathf.Sqrt(3)/6),//2
+        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//3
+
+    };
+    Vector3[] vertices3 =
+    {
+        //V2
+        new Vector3(0,      -(Mathf.Sqrt(6)/3)/2,       -.5773502691896f),//0
+        new Vector3(0.5f,   -(Mathf.Sqrt(6)/3)/2,       Mathf.Sqrt(3)/6),//1
+        new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2,        Mathf.Sqrt(3)/6),//2
+        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//3
+
+    };
 
     int[] triangles = {0,1,2,//check //0
                        0,3,1,//check //1
@@ -53,25 +71,22 @@ public class FlaurosPiramid : MonoBehaviour
     {
         Piramide();
     }
-    public void rotate(Vector3 _rotationAngle, int id)
-    {
-        Vector3 vector3 = _rotationAngle-transform.position;
 
-        switch (id)
+    public void Rotate(Vector3 _rotationAngle,int id)
+    {
+
+        Vector3 vector3 = _rotationAngle - transform.position;
+        Debug.Log(vector3);
+
+        if (id == 2)
         {
-            case 0:
-                vector3.y *= -1;
-                break;
-            case 1:
-                vector3.z *= -1;
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            default:
-                break;
+            for (int i = 0; i < vertices.Length; i++)
+            {
+                vertices[i] = matrixMult.RotX(vertices[i], vector3.x);
+            }
         }
+        else
+        {
 
         for (int i = 0; i < vertices.Length; i++)
         {
@@ -86,6 +101,20 @@ public class FlaurosPiramid : MonoBehaviour
             vertices[i] = matrixMult.RotZ(vertices[i], vector3.z);
         }
         
+        }
+            Piramide();
+        
+    }
+    public void RotateBack()
+    {
+        for (int i = 0; i < vertices.Length; i++)
+        {
+
+            vertices[i] = vertices2[i];
+
+        }
+        Piramide();
+
     }
     private void Update()
     {

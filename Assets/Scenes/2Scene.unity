@@ -272,7 +272,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
@@ -514,6 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: c7b31d7b042b4ee44b97b97d2419f0fe, type: 2}
+  matrixMult: {fileID: 1635793679}
 --- !u!23 &139951857
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -756,8 +757,16 @@ MonoBehaviour:
   - {fileID: 1134503542}
   Flauros: {fileID: 139951856}
   matrix: {fileID: 1635793679}
+  it: 0
   itc: 15
   mov: 0.65
+  rotation1: {x: 100, y: 90, z: 0}
+  rotation2: {x: 0, y: 90, z: 100}
+  rotation3: {x: 240, y: 180, z: 0}
+  rotation4: {x: 0, y: 0, z: 0}
+  rotation5: {x: 135, y: 50, z: 0}
+  rotation6: {x: 500, y: 450, z: 500}
+  rotation7: {x: 0, y: 270, z: 0}
 --- !u!1 &524226892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,7 +1083,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
@@ -6082,7 +6091,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
@@ -7132,7 +7141,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
