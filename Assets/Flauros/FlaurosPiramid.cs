@@ -25,6 +25,9 @@ public class FlaurosPiramid : MonoBehaviour
         new Vector3(0.5f,   -(Mathf.Sqrt(6)/3)/2,       Mathf.Sqrt(3)/6),//1
         new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2,        Mathf.Sqrt(3)/6),//2
         new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//3
+        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//4
+        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//5
+        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//6
 
 
     };
@@ -35,24 +38,28 @@ public class FlaurosPiramid : MonoBehaviour
         new Vector3(0.5f,   -(Mathf.Sqrt(6)/3)/2,       Mathf.Sqrt(3)/6),//1
         new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2,        Mathf.Sqrt(3)/6),//2
         new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//3
-
-    };
-    Vector3[] vertices3 =
-    {
-        //V2
-        new Vector3(0,      -(Mathf.Sqrt(6)/3)/2,       -.5773502691896f),//0
-        new Vector3(0.5f,   -(Mathf.Sqrt(6)/3)/2,       Mathf.Sqrt(3)/6),//1
-        new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2,        Mathf.Sqrt(3)/6),//2
-        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//3
+        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//4
+        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//5
+        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//6
 
     };
 
     int[] triangles = {0,1,2,//check //0
                        0,3,1,//check //1
-                       1,3,2,//check //2
-                       2,3,0
+                       1,4,2,//check //2
+                       2,5,0 //check //3
                        
     };
+
+    Vector2[] uvs = {
+            new Vector2(0, 0.75f),
+            new Vector2(0.25f, 0.66f),
+            new Vector2(0, 0.33f),
+            new Vector2(0.25f, 0.33f),
+            new Vector2(0.25f, 0.66f),
+            new Vector2(0, 0.33f),
+            new Vector2(0.25f, 0.33f),
+        };
     void Piramide()
     {
         Mesh mesh = GetComponent<MeshFilter>().mesh;
@@ -61,15 +68,19 @@ public class FlaurosPiramid : MonoBehaviour
         mesh.Clear();
         mesh.vertices = vertices;
         mesh.triangles = triangles;
+        mesh.uv = uvs;
         mesh.Optimize();
         mesh.RecalculateNormals();
-        
+
 
     }
 
     private void Start()
     {
+
         Piramide();
+        Mesh mesh = GetComponent<MeshFilter>().mesh;
+        Debug.Log(mesh.uv.Length);
     }
 
     public void Rotate(Vector3 _rotationAngle,int id)
