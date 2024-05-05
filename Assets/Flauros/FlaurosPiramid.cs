@@ -27,8 +27,6 @@ public class FlaurosPiramid : MonoBehaviour
         new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//3
         new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//4
         new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//5
-        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//6
-
 
     };
     Vector3[] vertices2 =
@@ -40,25 +38,25 @@ public class FlaurosPiramid : MonoBehaviour
         new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//3
         new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//4
         new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//5
-        new Vector3(0,      Mathf.Sqrt(6)/3/2,          0),//6
 
     };
 
     int[] triangles = {0,1,2,//check //0
                        0,3,1,//check //1
-                       1,4,2,//check //2
-                       2,5,0 //check //3
+                       1,5,2,//check //2
+                       2,4,0 //check //3
                        
     };
 
     Vector2[] uvs = {
-            new Vector2(0, 0.35f),      //0
-            new Vector2(0.25f, 0.66f),  //1
-            new Vector2(0, 0.33f),      //2
-            new Vector2(0.25f, 0.33f),  //3
-            new Vector2(0.25f, 0.66f),  //4
-            new Vector2(0, 0.33f),      //5
-            new Vector2(0.25f, 0.33f),  //6
+           new Vector2(0.294f, 0.668f),      //0
+           new Vector2(0.432f, 0.347f),  //1
+           new Vector2(0.159f, 0.347f),      //2
+
+           new Vector2(0.582f, 0.668f),  //3
+           new Vector2(0.0f, 0.668f),  //4
+           new Vector2(0.293f, 0.0f),  //5.
+
         };
     void Piramide()
     {

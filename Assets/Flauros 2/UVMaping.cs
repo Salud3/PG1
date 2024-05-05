@@ -11,24 +11,24 @@ public class UVMapping : MonoBehaviour
     {
 
         Vector3[] vertices = {
-            new Vector3(0, size, 0),
-            new Vector3(0, 0, 0),
-            new Vector3(size, size, 0),
-            new Vector3(size, 0, 0),
-
-            new Vector3(0, 0, size),
-            new Vector3(size, 0, size),
-            new Vector3(0, size, size),
-            new Vector3(size, size, size),
-
-            new Vector3(0, size, 0),
-            new Vector3(size, size, 0),
-
-            new Vector3(0, size, 0),
-            new Vector3(0, size, size),
-
-            new Vector3(size, size, 0),
-            new Vector3(size, size, size),
+            new Vector3(0, size, 0),        //0
+            new Vector3(0, 0, 0),           //1
+            new Vector3(size, size, 0),     //2
+            new Vector3(size, 0, 0),        //3
+                                            //
+            new Vector3(0, 0, size),        //4
+            new Vector3(size, 0, size),     //5
+            new Vector3(0, size, size),     //6
+            new Vector3(size, size, size),  //7
+                                            //
+            new Vector3(0, size, 0),        //8
+            new Vector3(size, size, 0),     //9
+                                            //
+            new Vector3(0, size, 0),        //10
+            new Vector3(0, size, size),     //11
+                                            //
+            new Vector3(size, size, 0),     //12
+            new Vector3(size, size, size),  //13
         };
 
         int[] triangles = {

@@ -16,18 +16,13 @@ public class FlaurosCenter : MonoBehaviour
         new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2 ,   Mathf.Sqrt(3)/2            -0.5773507f ),//2                     
         new Vector3(0,      (Mathf.Sqrt(6)/3)/2 ,   (Mathf.Sqrt(3)/2)+.2886756f-0.5773507f ),//3
         new Vector3(0.5f,   (Mathf.Sqrt(6)/3)/2 ,   .2886756f                  -0.5773507f ),//4
-        new Vector3(-0.5f,  (Mathf.Sqrt(6)/3)/2 ,   .2886756f                  -0.5773507f )//5
+        new Vector3(-0.5f,  (Mathf.Sqrt(6)/3)/2 ,   .2886756f                  -0.5773507f ),//5
 
-        /*
-        //V2
-        new Vector3(0,      -(Mathf.Sqrt(6)/3)/2,       -.5773502691896f),//0
-        new Vector3(0.5f,   -(Mathf.Sqrt(6)/3)/2,       Mathf.Sqrt(3)/6),//1
-        new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2,        Mathf.Sqrt(3)/6),//2
+        new Vector3(0.5f,   -(Mathf.Sqrt(6)/3)/2 ,   Mathf.Sqrt(3)/2            -0.5773507f ),//6//1
+        new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2 ,   Mathf.Sqrt(3)/2            -0.5773507f ),//7//2
 
-        new Vector3(0,      Mathf.Sqrt(6)/3/2,       -.5773502691896f),//0
-        new Vector3(0.5f,   Mathf.Sqrt(6)/3/2,       (Mathf.Sqrt(3)/6) +.5773502691896f),//1
-        new Vector3(-0.5f,  Mathf.Sqrt(6)/3/2,       (Mathf.Sqrt(3)/6) +.5773502691896f),//2
-        */
+        new Vector3(0,      (Mathf.Sqrt(6)/3)/2 ,   (Mathf.Sqrt(3)/2)+.2886756f-0.5773507f ),//8//3
+        new Vector3(-0.5f,  (Mathf.Sqrt(6)/3)/2 ,   .2886756f                  -0.5773507f ),//9//5              
 
 
     };
@@ -35,22 +30,54 @@ public class FlaurosCenter : MonoBehaviour
     {
         new Vector3(0,      -(Mathf.Sqrt(6)/3)/2 ,   0                          -0.5773507f ),//0
         new Vector3(0.5f,   -(Mathf.Sqrt(6)/3)/2 ,   Mathf.Sqrt(3)/2            -0.5773507f ),//1
-        new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2 ,   Mathf.Sqrt(3)/2            -0.5773507f ),//2                     
+        new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2 ,   Mathf.Sqrt(3)/2            -0.5773507f ),//2
+                                                                                              
         new Vector3(0,      (Mathf.Sqrt(6)/3)/2 ,   (Mathf.Sqrt(3)/2)+.2886756f-0.5773507f ),//3
         new Vector3(0.5f,   (Mathf.Sqrt(6)/3)/2 ,   .2886756f                  -0.5773507f ),//4
-        new Vector3(-0.5f,  (Mathf.Sqrt(6)/3)/2 ,   .2886756f                  -0.5773507f )//5
+        new Vector3(-0.5f,  (Mathf.Sqrt(6)/3)/2 ,   .2886756f                  -0.5773507f ),//5
+
+        new Vector3(0.5f,   -(Mathf.Sqrt(6)/3)/2 ,   Mathf.Sqrt(3)/2            -0.5773507f ),//6//1
+        new Vector3(-0.5f,  -(Mathf.Sqrt(6)/3)/2 ,   Mathf.Sqrt(3)/2            -0.5773507f ),//7//2
+
+        new Vector3(0,      (Mathf.Sqrt(6)/3)/2 ,   (Mathf.Sqrt(3)/2)+.2886756f-0.5773507f ),//8//3
+        new Vector3(-0.5f,  (Mathf.Sqrt(6)/3)/2 ,   .2886756f                  -0.5773507f ),//9//5     
+
 
     };
 
-    int[] triangles = {0,1,2,//check //0
-                       3,4,5,//check
-                       0,4,1,//check
-                       2,5,0,//check
-                       1,4,3,//check
-                       1,3,2,//check
-                       2,3,5,//check
-                       0,5,4//check
+    int[] triangles = {0,1,2,//ABAJO //0,1,2 //check
+
+         8,4,9,//ARRIBA //TAPADO // 3,5,4 //check
+
+         //de abajo para arriba
+         0,4,6,//check//2 //TAPADO // C/check
+         2,5,0,//check//3 //TAPADO // B //PERFECTO /check
+         7,6,8,//check//5 //TAPADO // D/check
+
+         //de arriba para abajo
+         4,8,6,//check//4 //1,4,3/check
+         2,3,5,//check//6 //2,3,5// check
+         0,5,4//check//7 //0,5,4/check
     };
+         
+    Vector2[] uvs = {
+        new Vector2(  0.489f,0.333f  ),  //0
+        new Vector2(  0.611f,0.056f  ),  //1 
+        new Vector2(  0.731f,0.333f  ),  //2
+
+        new Vector2(  0.863f,0.622f  ),  //3
+        new Vector2(  0.365f,0.625f  ),  //4 
+        new Vector2(  0.62f,0.62f  ),  //5
+                   
+        new Vector2(  0.249f,0.333f  ),  //6 
+                   
+        new Vector2(  0f,0.33f  ),  //7
+
+        new Vector2(  0.122f,0.627f  ),  //8//N
+        new Vector2(  0.251f,0.904f  ),  //9//N
+    
+    };
+
     void FlauroCenter()
     {
         Mesh mesh = GetComponent<MeshFilter>().mesh;
@@ -59,6 +86,7 @@ public class FlaurosCenter : MonoBehaviour
         mesh.Clear();
         mesh.vertices = vertices;
         mesh.triangles = triangles;
+        mesh.uv = uvs;
         mesh.Optimize();
         mesh.RecalculateNormals();
 
