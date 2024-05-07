@@ -651,7 +651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &392706143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6421,7 +6421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2d552ae39c4f024b905504e5b8651fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7009666
+      value: 8.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2d552ae39c4f024b905504e5b8651fb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6429,7 +6429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2d552ae39c4f024b905504e5b8651fb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.20461655
+      value: -2.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2d552ae39c4f024b905504e5b8651fb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6464,7 +6464,10 @@ PrefabInstance:
       value: Kunai
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: f2d552ae39c4f024b905504e5b8651fb, type: 3}
+    - {fileID: -8700617353114198275, guid: f2d552ae39c4f024b905504e5b8651fb, type: 3}
+    - {fileID: 8821623529969584324, guid: f2d552ae39c4f024b905504e5b8651fb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d552ae39c4f024b905504e5b8651fb, type: 3}
