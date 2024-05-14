@@ -52,7 +52,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _LiquidAmount: 0.73
+    - _LiquidAmount: 0.71
     - _MiddleAmount: 0
     - _QueueControl: 0
     - _QueueOffset: 0
