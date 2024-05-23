@@ -279,14 +279,7 @@
             "m_Id": "52d2ab064f2641078d5e6be2f4f84f1a"
         }
     ],
-    "m_StickyNoteDatas": [
-        {
-            "m_Id": "21d09da595524c209b7951ad01ee5b82"
-        },
-        {
-            "m_Id": "11a8ce0e32fa4d3b990e0621ac26d176"
-        }
-    ],
+    "m_StickyNoteDatas": [],
     "m_Edges": [
         {
             "m_OutputSlot": {
@@ -1816,26 +1809,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
-    "m_ObjectId": "11a8ce0e32fa4d3b990e0621ac26d176",
-    "m_Title": "New Note",
-    "m_Content": "Make the bubbles move a bit slower or faster\n",
-    "m_TextSize": 0,
-    "m_Theme": 0,
-    "m_Position": {
-        "serializedVersion": "2",
-        "x": 4043.428466796875,
-        "y": -163.42857360839845,
-        "width": 200.000244140625,
-        "height": 160.0
-    },
-    "m_Group": {
-        "m_Id": "d9519cde02c24345a92897885237b1f0"
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "1287aa7419844a739a16a643cfd34a42",
     "m_Id": 2,
@@ -2414,26 +2387,6 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
-    "m_ObjectId": "21d09da595524c209b7951ad01ee5b82",
-    "m_Title": "New Note",
-    "m_Content": "0 to 1 would mean we offset the entire texture for each dot. So tune it down a lot to only offset from e.g. 0 to 0.05\n",
-    "m_TextSize": 0,
-    "m_Theme": 0,
-    "m_Position": {
-        "serializedVersion": "2",
-        "x": 3171.428466796875,
-        "y": -600.5714111328125,
-        "width": 200.0,
-        "height": 159.99996948242188
-    },
-    "m_Group": {
-        "m_Id": "f1f3ccbbc49e4e0eaef646abd5c7b4a7"
-    }
 }
 
 {
