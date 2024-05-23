@@ -98,7 +98,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LiquidAmount: 0.95
+    - _LiquidAmount: 0.67
     - _Metallic: 0
     - _MidAmount: 0.2
     - _OcclusionStrength: 1
@@ -117,9 +117,9 @@ Material:
     - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MidColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    - _MidColor: {r: 0.7137255, g: 0.6666667, b: 0.054901965, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _TopColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+    - _TopColor: {r: 0.6, g: 0.5019608, b: 0.019607844, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &4359956995219838633
 MonoBehaviour:
