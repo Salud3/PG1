@@ -90,26 +90,26 @@ Material:
     - _DisplacementStrength: 1
     - _Divide_by: 0.47
     - _Float: 1
-    - _LocalDisplacementScale: 3.14
-    - _LocalDisplacementSpeed: 0.64
+    - _LocalDisplacementScale: -0.28
+    - _LocalDisplacementSpeed: 0.04
     - _Offset: -0.8
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SurfaceNoise: 2.32
     - _SurfaceNoiseScale: 2.46
     - _SurfaceNoiseSpeed: 1
-    - _SurfaceNoiseStrength: 0.75
-    - _smoothness: 0.32
+    - _SurfaceNoiseStrength: 16.35
+    - _smoothness: 0.77
     m_Colors:
-    - _BaseColor: {r: 0.13679245, g: 0.12780158, b: 0, a: 0}
-    - _BubblesEmission: {r: 0.47861302, g: 0.12187693, b: 0, a: 0}
+    - _BaseColor: {r: 0.13725491, g: 0.11946739, b: 0, a: 1}
+    - _BubblesEmission: {r: 1, g: 0.32400048, b: 0, a: 0}
     - _Emission: {r: 0, g: 1, b: 0.052033424, a: 0}
-    - _Flow: {r: 0, g: 0.45, b: 0, a: 0}
+    - _Flow: {r: 0.1, g: -0.75, b: 0, a: 0}
     - _LocalDisplacement: {r: 0, g: 0, b: 0.32, a: 0}
     - _LocalDisplacementStrength: {r: 0, g: 0, b: 0, a: 0}
     - _ScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
-    - _SplurColor: {r: 0.3584906, g: 0.22768678, b: 0, a: 0}
-    - _SplurEmission: {r: 0, g: 0, b: 0, a: 0}
+    - _SplurColor: {r: 0, g: 1, b: 0.0381248, a: 0}
+    - _SplurEmission: {r: 0, g: 0.43824723, b: 0.65882355, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &9096251761093512714
 MonoBehaviour:
